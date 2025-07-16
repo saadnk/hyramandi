@@ -1,0 +1,246 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fffdf8;
+  color: #222;
+  text-align: center;
+}
+
+.menu-header {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.menu-header .image-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://i.pinimg.com/1200x/64/d6/c0/64d6c0d6c6b4e0e1c20c0b7b67b07fdc.jpg') no-repeat center center/cover;
+  z-index: 0;
+}
+
+.menu-header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.menu-header .header-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.menu-header h1 {
+  font-size: 3rem;
+  margin-bottom: -10px;
+}
+
+.menu-header p {
+  font-size: 1.3rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: -230px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 3;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.tab-button.active {
+  border-color: #b3560a;
+  color: #b3560a;
+}
+
+.tab-content {
+  padding: 30px 20px;
+}
+
+.menu-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 0;
+  margin-top: -250px;
+}
+
+.menu-card {
+  background-color: #fffdf8;
+  border: 1.5px solid #f4ce9f;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(255, 186, 60, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #4a2d0f;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(255, 186, 60, 0.35);
+  background-color: #fff6eb;
+}
+
+.breadcrumb {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.breadcrumb a {
+  color: #ffb52a;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: #fff;
+}
+
+.breadcrumb span {
+  margin: 0 5px;
+}
+
+.breadcrumb .active {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Footer Base Styling */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px 30px;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-box h3 {
+  color: #dc2626;
+  margin-bottom: 10px;
+}
+
+.footer-box h4 {
+  font-weight: bold;
+  color: #dc2626;
+  margin: 10px 0;
+}
+
+.footer-box p {
+  color: #ccc;
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 6px;
+}
+
+.footer-box ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-box ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Fixed Newsletter Form Styling */
+.footer-box form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: nowrap;
+}
+
+.footer-box input[type="email"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  min-width: 0;
+  /* important to avoid overflow */
+}
+
+.footer-box button {
+  background-color: #dc2626;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+}
+
+.footer-box button:hover {
+  background-color: #b91c1c;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: #ccc;
+  font-size: 0.875rem;
+  margin-top: 40px;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+  .footer-box form {
+    flex-direction: column;
+  }
+
+  .footer-box input[type="email"],
+  .footer-box button {
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  .footer-box button {
+    margin-bottom: 0;
+  }
+}
